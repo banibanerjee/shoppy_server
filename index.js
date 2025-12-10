@@ -13,12 +13,13 @@ const PORT = process.env.PORT || 2000; // Define PORT
 
 app.use(express.json());
 app.use(cors({
-    origin: "https://shoppy-server-qj9v.onrender.com",   // your frontend domain
+    origin: "https://shoppy-ui-two.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "auth-token", "Authorization"],
     credentials: true
-  }));
-  app.options("*", cors());
+}));
+
+app.options("*", cors());
 
 // Database connection with mongoose
 connectDb(); // Corrected function call
