@@ -21,7 +21,7 @@ app.use(cors({
 connectDb(); // Corrected function call
 
 app.listen(PORT, () => {
-    console.log(`Server listening at https://shoppy-swxy.onrender.com`);
+    console.log(`Server listening at https://shoppy-server-qj9v.onrender.com`);
 });
 
 // API creation
@@ -43,7 +43,7 @@ app.use('/images', express.static('upload/images'));
 app.post("/upload", upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `https://shoppy-swxy.onrender.com/images/${req.file.filename}`
+        image_url: `https://shoppy-server-qj9v.onrender.com/images/${req.file.filename}`
     });
 });
 
